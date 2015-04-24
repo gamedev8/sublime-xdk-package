@@ -41,6 +41,17 @@ The Sublime Text plugins folders are usually located in the following places:
 -   Linux:  
     usually `~/.Sublime\ Text\ X/Packages`  
     where ‘X' is ‘2' or ‘3', but may vary.
+    
+    If you installed sublime via apt-get, then the packages folder is probably<br />
+    /opt/sublime_text/Packages<br />
+    If you can't find the Packages folder, then try the following<br />
+    $ cd /<br />
+    $ locate sublime_text/Packages<br />
+
+    You will need to create a sublime package out of the "XDK" folder. Sublime
+    packages are zip archives, but the extension is changed to .sublime-package<br />
+    $ zip -b . XDK.sublime-package ./XDK/*<br />
+    $ sudo cp XDK.sublime-package /opt/sublime_text/Packages<br />    
 
 Most of the features of this plugin require that the Intel XDK is running on the
 same system as your Sublime Text editor, and that you are logged into the Intel
